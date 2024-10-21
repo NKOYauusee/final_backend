@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" scanPeriod="60 seconds" debug="false">
+    <!-- 定义日志的根目录 -->
+    <property name="LOG_HOME" value="logs/"/>
+
+    <!-- ConsoleAppender 输出到控制台 -->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- RollingFileAppender 输出到文件，支持日志滚动 -->
+    <appender name="appLogAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/app.log</file>
+
+        <!-- 使用 SizeAndTimeBasedRollingPolicy 进行日志滚动管理 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 定义日志文件的命名模式，按时间和大小滚动 -->
+            <fileNamePattern>${LOG_HOME}/%d{yyyy-MM}/%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- 最大日志文件大小 -->
+            <maxFileSize>512MB</maxFileSize>
+            <!-- 保留30天内的日志文件 -->
+            <maxHistory>30</maxHistory>
+            <!-- 日志总大小限制 -->
+            <totalSizeCap>5GB</totalSizeCap>
+        </rollingPolicy>
+
+        <!-- 定义日志输出格式 -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%logger{50} : %line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 定义日志级别和输出位置 -->
+    <logger name="org.hibernate" level="error"/>
+    <logger name="org.springframework" level="error" additivity="false"/>
+    <logger name="com.fairyland" level="info" additivity="true">
+        <appender-ref ref="appLogAppender"/>
+    </logger>
+
+    <!-- root logger -->
+    <root level="info">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="appLogAppender"/>
+    </root>
+</configuration>

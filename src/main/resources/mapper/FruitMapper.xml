@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.backend.mapper.FruitMapper">
+    <resultMap id="BaseResultMap" type="org.example.backend.entity.po.Fruit">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="price" jdbcType="DECIMAL" property="price"/>
+        <result column="locality" jdbcType="VARCHAR" property="locality"/>
+        <result column="create_time" jdbcType="DATE" property="create_time"/>
+    </resultMap>
+
+    <insert id="insert">
+        INSERT INTO `fruit` (name, price, locality, create_time)
+        VALUES (#{name}, #{price}, #{locality}, #{create_time})
+    </insert>
+
+    <delete id="delete" parameterType="org.example.backend.entity.po.Fruit">
+        DELETE
+        FROM fruit
+        where id = #{id}
+    </delete>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        SELECT id, name, price, locality, create_time
+        FROM fruit
+    </select>
+
+    <update id="update" parameterType="org.example.backend.entity.po.Fruit">
+        update `fruit`
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="price != null">
+                price = #{price},
+            </if>
+            <if test="locality != null">
+                locality = #{locality},
+            </if>
+            <if test="Date != null">
+                Date = #{Date},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+</mapper>
