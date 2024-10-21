@@ -514,3 +514,17 @@ org.example.backend.exception.BusinessException: null
 2024-10-21 16:12:49.384 [main] INFO  [org.apache.catalina.core.StandardEngine : 173] - Starting Servlet engine: [Apache Tomcat/10.1.30]
 2024-10-21 16:12:49.471 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173] - Initializing Spring embedded WebApplicationContext
 2024-10-21 16:12:50.568 [main] INFO  [org.apache.catalina.core.StandardService : 173] - Stopping service [Tomcat]
+2024-10-21 16:16:08.353 [main] INFO  [org.example.backend.BackendApplication : 50] - Starting BackendApplication using Java 17.0.4.1 with PID 5580 (D:\MyCodes\final_work\backend\target\classes started by Yomig in D:\MyCodes\final_work\backend)
+2024-10-21 16:16:08.357 [main] INFO  [org.example.backend.BackendApplication : 654] - No active profile set, falling back to 1 default profile: "default"
+2024-10-21 16:16:10.508 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol : 173] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-21 16:16:10.517 [main] INFO  [org.apache.catalina.core.StandardService : 173] - Starting service [Tomcat]
+2024-10-21 16:16:10.518 [main] INFO  [org.apache.catalina.core.StandardEngine : 173] - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-21 16:16:10.601 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173] - Initializing Spring embedded WebApplicationContext
+2024-10-21 16:16:11.703 [main] INFO  [org.apache.catalina.core.StandardService : 173] - Stopping service [Tomcat]
+2024-10-21 16:16:51.704 [main] INFO  [org.example.backend.BackendApplication : 50] - Starting BackendApplication using Java 17.0.4.1 with PID 11216 (D:\MyCodes\final_work\backend\target\classes started by Yomig in D:\MyCodes\final_work\backend)
+2024-10-21 16:16:51.708 [main] INFO  [org.example.backend.BackendApplication : 654] - No active profile set, falling back to 1 default profile: "default"
+2024-10-21 16:16:53.797 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol : 173] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-21 16:16:53.803 [main] INFO  [org.apache.catalina.core.StandardService : 173] - Starting service [Tomcat]
+2024-10-21 16:16:53.804 [main] INFO  [org.apache.catalina.core.StandardEngine : 173] - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-21 16:16:53.883 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173] - Initializing Spring embedded WebApplicationContext
+2024-10-21 16:16:54.919 [main] INFO  [org.apache.catalina.core.StandardService : 173] - Stopping service [Tomcat]

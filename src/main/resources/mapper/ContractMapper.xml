@@ -6,7 +6,7 @@
 
     <insert id="insert">
         INSERT INTO contract (code, type, retailer_id, create_time)
-        values (#{code}, #{type}, #{retailer_id}, #{create_time})
+        VALUES (#{code}, #{type}, #{retailer_id}, #{create_time})
     </insert>
 
     <delete id="delete" parameterType="org.example.backend.entity.po.Contract">
