@@ -6,10 +6,7 @@ import org.example.backend.controller.BaseController;
 import org.example.backend.entity.po.Retailer;
 import org.example.backend.entity.vo.ResponseVo;
 import org.example.backend.service.RetailerService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,16 +24,30 @@ public class RetailerController extends BaseController {
     }
 
     @FucLogger("修改零售商")
-    @RequestMapping("/add")
+    @RequestMapping("/update")
     public ResponseVo update(@RequestBody Retailer retailer) {
         retailerService.update(retailer);
         return resSuccess("修改成功", null);
     }
 
+    @FucLogger("批量修改零售商")
+    @RequestMapping("/batchUpdate")
+    public ResponseVo batchUpdate(@RequestBody List<Retailer> retailer) {
+        retailerService.batchUpdate(retailer);
+        return resSuccess("批量修改成功", null);
+    }
+
+
     @FucLogger("查询零售商")
     @RequestMapping("/all")
-    public ResponseVo selectAll(int page) {
-        List<Retailer> res = retailerService.selectAll(page);
+    public ResponseVo selectAll(@RequestParam(value = "goodsId", required = false) Integer id) {
+        List<Retailer> res;
+        if (id == null) {
+            res = retailerService.selectHasSelected();
+        } else {
+            res = retailerService.selectAll(id);
+        }
+
         return resSuccess("查询成功", res);
     }
 }

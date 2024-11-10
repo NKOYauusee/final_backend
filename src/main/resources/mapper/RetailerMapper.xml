@@ -4,6 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.example.backend.mapper.RetailerMapper">
     <insert id="insert">
+        INSERT INTO retailers (name, phone, address, status, create_time)
+        VALUES (#{name}, #{phone}, #{ address}, #{status}, #{create_time})
     </insert>
 
     <update id="update" parameterType="org.example.backend.entity.po.Retailer">
@@ -15,8 +17,8 @@
             <if test="phone != null">
                 phone = #{phone},
             </if>
-            <if test="status != status">
-                locality = #{locality},
+            <if test="status != null">
+                status = #{status},
             </if>
             <if test="address != null">
                 address = #{address},
@@ -25,11 +27,18 @@
                 create_time = #{create_time},
             </if>
         </set>
-        where id = #{id}
+        where id = #{id} and goodsId = #{goodsId}
     </update>
 
     <select id="selectAll" resultType="org.example.backend.entity.po.Retailer">
-        SELECT id, name, phone, address, status, create_time
+        SELECT *
         FROM retailers
+        WHERE goodsId = #{id}
+    </select>
+
+    <select id="selectHasSelected" resultType="org.example.backend.entity.po.Retailer">
+        SELECT *
+        FROM retailers
+        WHERE status = 1
     </select>
 </mapper>

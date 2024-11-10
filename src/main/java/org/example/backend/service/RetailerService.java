@@ -8,6 +8,11 @@ public interface RetailerService {
     void insert(Retailer retailer);
 
     void update(Retailer retailer);
+    void batchUpdate(List<Retailer> retailer);
 
-    List<Retailer> selectAll(int page);
+    List<Retailer> selectAll(int id);
+
+    List<Retailer> selectHasSelected();
+
+    int getPageSize();
 }

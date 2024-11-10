@@ -3,16 +3,16 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.example.backend.mapper.ContractMapper">
-
     <insert id="insert">
-        INSERT INTO contract (code, type, retailer_id, create_time)
-        VALUES (#{code}, #{type}, #{retailer_id}, #{create_time})
+        INSERT INTO contract (code, goodsId, retailer_id, create_time)
+        VALUES (#{code}, #{goodsId}, #{retailer_id}, #{create_time})
     </insert>
 
     <delete id="delete" parameterType="org.example.backend.entity.po.Contract">
         delete
         from contract
-        where id = #{id}
+        where goodsId = #{goodsId}
+          and retailer_id = #{retailer_id}
     </delete>
 
     <update id="update" parameterType="org.example.backend.entity.po.Contract">
@@ -21,8 +21,8 @@
             <if test="code != null">
                 code = #{code},
             </if>
-            <if test="type != null">
-                type = #{type},
+            <if test="goodsId != null">
+                goodsId = #{goodsId},
             </if>
             <if test="retailer_id != null">
                 retailer_id = #{retailer_id},
@@ -35,7 +35,15 @@
     </update>
 
     <select id="selectAll" resultType="org.example.backend.entity.po.Contract">
-        select code, type, retailer_id, create_time
+        select *
         from contract
+    </select>
+
+    <select id="selectByRetailAndGoodsId" parameterType="org.example.backend.entity.po.Contract"
+            resultType="org.example.backend.entity.po.Contract">
+        select *
+        from `contract`
+        where goodsId = ${goodsId}
+          and retailer_id = #{retailer_id}
     </select>
 </mapper>

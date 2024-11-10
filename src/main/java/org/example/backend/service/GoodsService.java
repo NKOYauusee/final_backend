@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface GoodsService {
     List<Fruit> selectAll(int page);
+    int getPageSize();
 
     void update(Fruit fruit);
 

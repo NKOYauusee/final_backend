@@ -13,4 +13,5 @@ public class Retailer {
     // 0 停用  1 启用
     Integer status;
     Date create_time;
+    Integer goodsId;
 }

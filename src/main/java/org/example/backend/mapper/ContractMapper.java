@@ -15,4 +15,6 @@ public interface ContractMapper {
     void update(Contract contract);
 
     List<Contract> selectAll();
+
+    Contract selectByRetailAndGoodsId(Contract contract);
 }

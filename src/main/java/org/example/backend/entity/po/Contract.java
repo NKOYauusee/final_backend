@@ -8,7 +8,7 @@ import java.util.Date;
 public class Contract {
     Integer id;
     String code;
-    Integer type; // 1 省内 2 省外
+    Integer goodsId;
     Integer retailer_id;
     Date create_time;
 }

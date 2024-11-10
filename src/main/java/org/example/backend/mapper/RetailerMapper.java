@@ -12,6 +12,7 @@ public interface RetailerMapper {
 
     void update(Retailer retailer);
 
-    List<Retailer> selectAll();
+    List<Retailer> selectAll(int id);
+    List<Retailer> selectHasSelected();
 
 }
