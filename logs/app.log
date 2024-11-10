@@ -3326,3 +3326,19 @@ java.sql.SQLSyntaxErrorException: Unknown column 'type' in 'field list'
 2024-11-10 11:42:24.431 [HikariPool-1 housekeeper] WARN  [com.zaxxer.hikari.pool.HikariPool : 797] - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h55m46s517ms595µs100ns).
 2024-11-10 11:55:00.419 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource : 349] - HikariPool-1 - Shutdown initiated...
 2024-11-10 11:55:00.455 [SpringApplicationShutdownHook] INFO  [com.zaxxer.hikari.HikariDataSource : 351] - HikariPool-1 - Shutdown completed.
+2024-11-10 11:55:07.282 [main] INFO  [org.example.backend.BackendApplication : 50] - Starting BackendApplication using Java 17.0.4.1 with PID 10672 (D:\MyCodes\final_work\backend\target\classes started by Yomig in D:\MyCodes\final_work\backend)
+2024-11-10 11:55:07.383 [main] INFO  [org.example.backend.BackendApplication : 654] - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 11:55:09.634 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol : 173] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 11:55:09.640 [main] INFO  [org.apache.catalina.core.StandardService : 173] - Starting service [Tomcat]
+2024-11-10 11:55:09.640 [main] INFO  [org.apache.catalina.core.StandardEngine : 173] - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 11:55:09.723 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173] - Initializing Spring embedded WebApplicationContext
+2024-11-10 11:55:11.702 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol : 173] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 11:55:11.747 [main] INFO  [org.example.backend.BackendApplication : 56] - Started BackendApplication in 5.336 seconds (process running for 6.192)
+2024-11-10 14:03:08.370 [main] INFO  [org.example.backend.BackendApplication : 50] - Starting BackendApplication using Java 17.0.4.1 with PID 12076 (D:\MyCodes\final_work\backend\target\classes started by Yomig in D:\MyCodes\final_work\backend)
+2024-11-10 14:03:08.376 [main] INFO  [org.example.backend.BackendApplication : 654] - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:03:10.875 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol : 173] - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:03:10.891 [main] INFO  [org.apache.catalina.core.StandardService : 173] - Starting service [Tomcat]
+2024-11-10 14:03:10.892 [main] INFO  [org.apache.catalina.core.StandardEngine : 173] - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:03:10.984 [main] INFO  [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/api] : 173] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:03:12.728 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol : 173] - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:03:12.770 [main] INFO  [org.example.backend.BackendApplication : 56] - Started BackendApplication in 6.023 seconds (process running for 7.048)
